@@ -29,7 +29,7 @@ public class GroupTrigger : MonoBehaviour
                 isAllTriggered = false;
         }
 
-        if(_isTriggeredOnce)
+        if(_isTriggeredOnce && isAllTriggered)
         {
             TriggerEffect(true);
             _isTriggered = true;
