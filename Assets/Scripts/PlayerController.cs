@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour
         _layermask = (1 << 8); //Player
         _layermask |= (1 << 9);//enemy
         _layermask |= (1 << 10);//camera
+        _layermask |= (1 << 13);// switch
         _layermask = ~_layermask;
     }
 
