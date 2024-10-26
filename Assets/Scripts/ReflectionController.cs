@@ -2,15 +2,16 @@ using UnityEngine;
 
 public class ReflectionController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public SpriteRenderer reflectSprite;
+    Color _refColor;
+
+    private void Start()
     {
-        
+        _refColor = reflectSprite.color;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateSpriteAlpha(float delta)
     {
-        
+        reflectSprite.color = new Color(_refColor.r, _refColor.g, _refColor.b, delta);
     }
 }

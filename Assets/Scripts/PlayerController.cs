@@ -9,17 +9,18 @@ public class PlayerController : MonoBehaviour
     public PlayerInput playerInput;
     public SpriteRenderer spriteRender;
     public MirrorController mirrorControl;
+    public ReflectionController reflectionControl;
 
     Vector2 _movementInput;
     float _xInput;
 
-    float _moveForce = 10f;
-    float _jumpForce = 14f;
+    float _moveForce = 5.25f;
+    float _jumpForce = 11f;
     float _jumpThreshold = 1.5f;
 
     float _playerFacing = 1f;
 
-    bool _isJumpKeyDown = false;
+    bool _isJumpKeyPressed = false;
     bool _inAir = false;
 
 
@@ -54,13 +55,16 @@ public class PlayerController : MonoBehaviour
 
         if (_xInput > 0)
         {
-            spriteRender.flipX = true;
             _playerFacing = 1;
+            spriteRender.flipX = true;
+            reflectionControl.reflectSprite.flipX = false;
         }
         if (_xInput < 0)
         {
             _playerFacing = -1;
             spriteRender.flipX = false;
+            reflectionControl.reflectSprite.flipX = true;
+
         }
     }
 
@@ -71,7 +75,8 @@ public class PlayerController : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext ctx)
     {
-        _isJumpKeyDown = ctx.performed;
+        if (ctx.performed)
+            _isJumpKeyPressed = true;
     }
     void UpdateJump()
     {
@@ -94,11 +99,13 @@ public class PlayerController : MonoBehaviour
             _inAir = true;
         }
 
-        if (!_inAir && _isJumpKeyDown)
+        if (!_inAir && _isJumpKeyPressed)
         {
             _rigidbody.linearVelocity = new Vector2(_rigidbody.linearVelocity.x, _jumpForce);
             //anim.SetTrigger("TriggerJump");
         }
+
+        _isJumpKeyPressed = false;
     }
 
     public void OnMirror(InputAction.CallbackContext ctx)

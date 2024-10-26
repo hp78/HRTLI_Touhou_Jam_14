@@ -24,6 +24,7 @@ public class MirrorController : MonoBehaviour
         {
             rc.gameObject.SetActive(true);
             rc.transform.position = new Vector3((-pc.transform.position.x + transform.position.x + transform.position.x), pc.transform.position.y);
+            rc.UpdateSpriteAlpha(0.5f - 0.5f * Mathf.Abs(pc.transform.position.y - transform.position.y));
         }
         else
         {
