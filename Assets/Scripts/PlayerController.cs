@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     public bool isAlive = true;
     public PlayerInput playerInput;
+    public Transform spriteAnchor;
     public SpriteRenderer spriteRender;
     public MirrorController mirrorControl;
     public ReflectionController reflectionControl;

@@ -341,6 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 352033cacc37aff4dbdd408429147d5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteAnchor: {fileID: 4943336070548425663}
   reflectSprite: {fileID: 845894282859786242}
 --- !u!50 &7713249030827731901
 Rigidbody2D:
@@ -836,6 +837,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isAlive: 1
   playerInput: {fileID: 6320760702073766144}
+  spriteAnchor: {fileID: 7450385637174441728}
   spriteRender: {fileID: 5537647060913761767}
   mirrorControl: {fileID: 5378238918967141428}
   reflectionControl: {fileID: 8984223625838067751}

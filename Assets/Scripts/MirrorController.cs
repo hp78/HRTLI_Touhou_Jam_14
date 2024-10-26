@@ -20,11 +20,13 @@ public class MirrorController : MonoBehaviour
     void Update()
     {
         // is in mirror view
-        if(pc.transform.position.y < (transform.position.y + 1.1) && pc.transform.position.y > (transform.position.y - 1.1))
+        if(pc.transform.position.y < (transform.position.y + 0.55) && pc.transform.position.y > (transform.position.y - 0.55))
         {
             rc.gameObject.SetActive(true);
             rc.transform.position = new Vector3((-pc.transform.position.x + transform.position.x + transform.position.x), pc.transform.position.y);
-            rc.UpdateSpriteAlpha(0.75f - 0.7f * Mathf.Abs(pc.transform.position.y - transform.position.y));
+            rc.spriteAnchor.SetLocalPositionAndRotation(pc.spriteAnchor.localPosition, Quaternion.Euler(0,0,-pc.spriteAnchor.localRotation.eulerAngles.z));
+            rc.spriteAnchor.localScale = pc.spriteAnchor.localScale;
+            rc.UpdateSpriteAlpha(0.75f - 1.4f * Mathf.Abs(pc.transform.position.y - transform.position.y));
         }
         else
         {

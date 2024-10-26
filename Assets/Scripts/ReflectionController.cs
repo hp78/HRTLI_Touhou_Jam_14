@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class ReflectionController : MonoBehaviour
 {
+    public Transform spriteAnchor;
     public SpriteRenderer reflectSprite;
     Color _refColor;
 
