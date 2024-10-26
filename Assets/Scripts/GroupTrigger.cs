@@ -1,36 +1,42 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class SwitchStepOn : MonoBehaviour
+public class GroupTrigger : MonoBehaviour
 {
+    public bool _isTriggeredOnce = true;
+    bool _isTriggered = false;
+    public List<GameObject> triggers = new List<GameObject>();
+
     public List<GameObject> activateOnTriggerList = new List<GameObject>();
     public List<GameObject> deactivateOnTriggerList = new List<GameObject>();
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (_isTriggeredOnce && _isTriggered)
+            return;
 
-    }
+        bool isAllTriggered = true;
+        foreach(GameObject go in triggers)
+        {
+            if (!go.activeInHierarchy)
+                isAllTriggered = false;
+        }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player") || collision.CompareTag("Reflection"))
+        if(_isTriggeredOnce)
         {
             TriggerEffect(true);
+            _isTriggered = true;
         }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player") || collision.CompareTag("Reflection"))
+        else
         {
-            TriggerEffect(false);
+            TriggerEffect(isAllTriggered);
         }
     }
 
