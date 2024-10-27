@@ -343,6 +343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteAnchor: {fileID: 4943336070548425663}
   reflectSprite: {fileID: 845894282859786242}
+  _refColor: {r: 0.60784316, g: 0.7921569, b: 1, a: 0.78431374}
 --- !u!50 &7713249030827731901
 Rigidbody2D:
   serializedVersion: 5
