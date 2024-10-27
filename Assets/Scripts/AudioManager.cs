@@ -76,6 +76,8 @@ public class AudioManager : MonoBehaviour
 
         bgmPairsArray = bgmPairs.ToArray();
         sfxPairsArray = sfxPairs.ToArray();
+
+        PlayBGM("BGM");
     }
 
     private void Update()

@@ -9,7 +9,11 @@ public class KillPlayer : MonoBehaviour
         if(collision.gameObject.layer == 8)
         {
             StartCoroutine(DeathSequence());
-            AudioManager.instance.PlaySFX("Player Death");
+
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.PlaySFX("Player Death");
+            }
         }       
     }
 
