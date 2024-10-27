@@ -22,6 +22,7 @@ public class SwitchStepOn : MonoBehaviour
     {
         if (collision.CompareTag("Player") || collision.CompareTag("Reflection"))
         {
+            AudioManager.instance.PlaySFX("Button Click");
             TriggerEffect(true);
         }
     }

@@ -452,6 +452,7 @@ Transform:
   - {fileID: 852505869722273901}
   - {fileID: 9073839988667839531}
   - {fileID: 6437701950183833234}
+  - {fileID: 4823388081279052223}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4072398594032846175
@@ -486,6 +487,63 @@ Transform:
   - {fileID: 5738662952842436149}
   m_Father: {fileID: 6437701950183833234}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4406354714600695274
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4823388081279052223}
+  - component: {fileID: 8069065691237217868}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4823388081279052223
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4406354714600695274}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 468466543080015453}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8069065691237217868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4406354714600695274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f01e16fa0f9e566468c1090370f1c335, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgms: []
+  sfxs:
+  - name: Button Click
+    clip: {fileID: 8300000, guid: 06de4a269df8c6445afccd9c364a8a46, type: 3}
+    originalVolume: 0.6
+    loop: 0
+    source: {fileID: 0}
+  - name: Player Death
+    clip: {fileID: 8300000, guid: 82f638e7dbeeaff478176d7bc8628fb8, type: 3}
+    originalVolume: 0.04
+    loop: 0
+    source: {fileID: 0}
+  isDestroyOnLoad: 1
 --- !u!1 &4615150090632524017
 GameObject:
   m_ObjectHideFlags: 0

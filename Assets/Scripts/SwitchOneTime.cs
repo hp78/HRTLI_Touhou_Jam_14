@@ -27,6 +27,7 @@ public class SwitchOneTime : MonoBehaviour
 
         if (collision.CompareTag("Player") || collision.CompareTag("Reflection"))
         {
+            AudioManager.instance.PlaySFX("Button Click");
             TriggerEffect();
         }
     }

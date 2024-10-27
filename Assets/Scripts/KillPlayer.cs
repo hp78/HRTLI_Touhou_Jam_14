@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,7 +8,15 @@ public class KillPlayer : MonoBehaviour
     {
         if(collision.gameObject.layer == 8)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            StartCoroutine(DeathSequence());
+            AudioManager.instance.PlaySFX("Player Death");
         }       
+    }
+
+    IEnumerator DeathSequence()
+    {
+        yield return new WaitForSeconds(0.2f);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
