@@ -904,7 +904,7 @@ MonoBehaviour:
     source: {fileID: 0}
   sfxs:
   - name: Button Click
-    clip: {fileID: 8300000, guid: 06de4a269df8c6445afccd9c364a8a46, type: 3}
+    clip: {fileID: 8300000, guid: afe09c95f9d51124f8d175b9670a10bb, type: 3}
     originalVolume: 0.6
     loop: 0
     source: {fileID: 0}
