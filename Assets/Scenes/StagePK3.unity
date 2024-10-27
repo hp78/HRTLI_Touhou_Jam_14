@@ -3318,6 +3318,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoreSystems
       objectReference: {fileID: 0}
+    - target: {fileID: 5744480059718521388, guid: 52856d34d288df34bb42c51153457c27, type: 3}
+      propertyPath: nextLevelName
+      value: StageP5
+      objectReference: {fileID: 0}
     - target: {fileID: 6437701950183833234, guid: 52856d34d288df34bb42c51153457c27, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.5

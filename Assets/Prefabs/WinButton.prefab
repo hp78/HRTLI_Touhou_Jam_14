@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3778737929295158211}
   - component: {fileID: 4300325588325689598}
   - component: {fileID: 1468028124554824262}
+  - component: {fileID: 7371676638348039883}
   m_Layer: 13
   m_Name: WinButton
   m_TagString: Switch
@@ -107,6 +108,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &7371676638348039883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246809311051466877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 670929bf987dd9f439cb1d4f086141bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6879710112004186102
 GameObject:
   m_ObjectHideFlags: 0

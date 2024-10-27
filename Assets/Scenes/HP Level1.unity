@@ -6459,6 +6459,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoreSystems
       objectReference: {fileID: 0}
+    - target: {fileID: 5744480059718521388, guid: 52856d34d288df34bb42c51153457c27, type: 3}
+      propertyPath: nextLevelName
+      value: StageP1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
