@@ -62,15 +62,14 @@ public class PlayerController : MonoBehaviour
         if (_xInput > 0)
         {
             _playerFacing = 1;
-            spriteRender.flipX = true;
-            reflectionControl.reflectSprite.flipX = false;
+            spriteRender.flipX = false;
+            reflectionControl.reflectSprite.flipX = true;
         }
         if (_xInput < 0)
         {
             _playerFacing = -1;
-            spriteRender.flipX = false;
-            reflectionControl.reflectSprite.flipX = true;
-
+            reflectionControl.reflectSprite.flipX = false;
+            spriteRender.flipX = true;
         }
 
         _anim.SetFloat("XVelocity", _xInput);
