@@ -4,11 +4,11 @@ public class ReflectionController : MonoBehaviour
 {
     public Transform spriteAnchor;
     public SpriteRenderer reflectSprite;
-    Color _refColor;
+    public Color _refColor;
 
     private void Start()
     {
-        _refColor = reflectSprite.color;
+        //_refColor = reflectSprite.color;
     }
 
     public void UpdateSpriteAlpha(float delta)
