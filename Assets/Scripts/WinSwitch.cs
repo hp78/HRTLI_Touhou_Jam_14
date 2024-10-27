@@ -8,13 +8,12 @@ public class WinSwitch : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        Invoke("DelayAddButtonCount", 0.1f);
     }
 
-    // Update is called once per frame
-    void Update()
+    void DelayAddButtonCount()
     {
-        
+        GameController.instance.AddWinButtonCount();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -22,16 +21,17 @@ public class WinSwitch : MonoBehaviour
         if (collision.CompareTag("Player") || collision.CompareTag("Reflection"))
         {
             AudioManager.instance.PlaySFX("Button Click");
-            NextLevel();
+            Collected();
         }
     }
 
-    void NextLevel()
+    void Collected()
     {
         if (isTriggered)
             return;
 
         isTriggered = true;
-        GameController.instance.LoadNextLevel();
+        GameController.instance.TickDownWinButton();
+        gameObject.SetActive(false);
     }
 }
