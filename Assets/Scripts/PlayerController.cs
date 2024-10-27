@@ -91,19 +91,18 @@ public class PlayerController : MonoBehaviour
     }
     void UpdateJump()
     {
-        RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x + 0.5f, transform.position.y), 
+        RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x + 0.4f, transform.position.y), 
             Vector2.down, _jumpThreshold, _layermask);
-        RaycastHit2D hit2 = Physics2D.Raycast(new Vector2(transform.position.x - 0.5f, transform.position.y), 
+        RaycastHit2D hit2 = Physics2D.Raycast(new Vector2(transform.position.x - 0.4f, transform.position.y), 
             Vector2.down, _jumpThreshold, _layermask);
         //Gizmos.color = Color.cyan;
 
         if (hit || hit2)
         {
             _inAir = false;
-            //anim.SetTrigger("TriggerLand");
 
-            //Debug.DrawLine(new Vector2(transform.position.x + 0.5f, transform.position.y), hit.point, Color.cyan);
-            //Debug.DrawLine(new Vector2(transform.position.x - 0.5f, transform.position.y), hit2.point, Color.cyan);
+            //Debug.DrawLine(new Vector2(transform.position.x + 0.4f, transform.position.y), hit.point, Color.cyan);
+            //Debug.DrawLine(new Vector2(transform.position.x - 0.4f, transform.position.y), hit2.point, Color.cyan);
         }
         else
         {
@@ -113,7 +112,6 @@ public class PlayerController : MonoBehaviour
         if (!_inAir && _isJumpKeyPressed)
         {
             _rigidbody.linearVelocity = new Vector2(_rigidbody.linearVelocity.x, _jumpForce);
-            //anim.SetTrigger("TriggerJump");
         }
 
         _isJumpKeyPressed = false;
